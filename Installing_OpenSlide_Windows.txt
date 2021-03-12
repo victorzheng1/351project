@@ -1,0 +1,30 @@
+Provided is a step by step guide to install OpenSlide for python on Windows
+
+Step 1
+
+Go to Openslide project Download
+https://openslide.org/download/
+
+Step 2
+Download the most recent 64-bit binary.
+Note where you're saving the binaries. 
+I saved it 'C:\\Windows\\System32\\openslide-win64-20171122\\bin' but you may chose to place it else where.
+
+Step 3
+In the command line type
+pip instal openslide-python
+
+Step 4
+Go to the script called
+lowlevel.py
+
+It will probably be somewhere like
+C:\Users\~\Python\Python38\Lib\site-packages\openslide
+
+Step 5
+In the script at line 42, after the import statements add
+
+import os
+os.add_dll_directory('C:\\Windows\\System32\\openslide-win64-20171122\\bin')
+
+This will allow python to find the dll.
